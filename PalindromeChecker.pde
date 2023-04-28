@@ -17,13 +17,27 @@ public void setup()
 public boolean palindrome(String word)
 {
   //your code here
+  if(word.equals(reverse(word))) {
+    return true;
+  }
+  
+  else {
+    return false;
+  }
+ /* 
+  for (int i = 0; i < word.length()/2; i++) {
+      if (word.charAt(i) == word.charAt(word.length() - 1 - i)) {
+        return true;
+      }
+    }
   return false;
-}
-public String reverse(String str)
-{
-    String sNew = new String();
-    //your code here
-    return sNew;
+  */
 }
 
-
+public String reverse(String str){
+  String newWord = "";
+  for(int i = str.length()-1; i >= 0; i--) {
+    newWord = newWord + str.charAt(i);
+  }
+  return newWord;
+}
